@@ -86,6 +86,7 @@ img{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color); 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover,
 .header-link:focus{
@@ -142,6 +143,7 @@ header a{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-tel{
     display: flex;
@@ -151,6 +153,7 @@ header a{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-mail:hover,
 .header-mail:focus{
@@ -158,7 +161,7 @@ header a{
 }
 .header-tel:hover,
 .header-tel:focus{
-color: var(--accent-color);
+    color: var(--accent-color);
 }
 .current {
     color: var(--accent-color);
@@ -300,24 +303,32 @@ color: var(--accent-color);
     margin-left: 30px;
 }
 .box-about{
-position: relative;
+    position: relative;
 }
+
 .text-box-about{
-position: absolute;
-bottom: 0;
-left: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-width: 370px;
-height: 70px;
-text-transform: uppercase;
-color: var(--hero-text-color);
-background-color: rgba(47, 48, 58, 0.8);
-}
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    height: 70px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--hero-text-color);
+    background-color: rgba(47, 48, 58, 0.8);
+    }
+
  /*команда*/
 
-  .team{
+.team{
     background-color: var(--background-team-color);
  }
  .team-list > .team-item:not(:first-child){
@@ -382,7 +393,7 @@ background-color: rgba(47, 48, 58, 0.8);
      fill: var(--icon-color);
  }
 
-.icon-social-link {
+.icon-social-link{
     width: 44px;
     height: 44px;
     align-items: center;
@@ -391,6 +402,8 @@ background-color: rgba(47, 48, 58, 0.8);
     display: flex;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color  250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
  .social-icon-item:not(:last-child){
@@ -444,6 +457,8 @@ background-color: rgba(47, 48, 58, 0.8);
     border-radius: 4px;
     margin-left: auto;
     fill: var(--icon-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -487,6 +502,7 @@ background-color: rgba(47, 48, 58, 0.8);
     font-weight: 400;
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  .footer-tel:hover, 
  .footer-tel:hover{
@@ -496,6 +512,7 @@ background-color: rgba(47, 48, 58, 0.8);
     font-weight: 400;
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  .footer-mail:hover,
  .footer-mail:focus{
@@ -530,6 +547,7 @@ background-color: rgba(47, 48, 58, 0.8);
     border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon{
     margin-left: 70px;
@@ -608,7 +626,7 @@ background-color: rgba(47, 48, 58, 0.8);
     border: 0 solid transparent;
     border-radius: 4px;
     padding: 6px 22px;
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .btn{
@@ -691,6 +709,10 @@ background-color: rgba(47, 48, 58, 0.8);
     position: relative;
     overflow: hidden;
 }
+.portfolio-link{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .overlay{
     position: absolute;
     top: 0;
@@ -703,11 +725,11 @@ background-color: rgba(47, 48, 58, 0.8);
     font-size: 18px;
     line-height: 1.55;
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link:hover .overlay,
-.link:focus .overlay{
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay{
     transform: translateY(0%);
-    background: rgba(33, 150, 243, 0.9);;
+    background-color: rgba(33, 150, 243, 0.9);
 }
